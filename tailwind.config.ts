@@ -11,7 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
+      charcoal:"var(--charcoal)", 
+      persiangreen:"var(--persian-green)",
+      saffron:"var(--saffron)",
+      sandybrown: "var(--sandy-brown)",
+      burntsienna: "var(--burnt-sienna)",
+        },
     },
   },
   plugins: [],
