@@ -29,12 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="sticky h-16 top-0 ">
+        <header className="sticky h-16 top-0 bg-white border-b border-gray-200 z-20 ring-gray-400 ring-1 ">
           <div className="flex justify-between items-center h-full  mx-auto px-16">
             <h1 className="text-2xl font-semibold text-burntsienna">Recipe App</h1>
             <div id="search-bar" className="w-[30vw] flex relative" >
               <input type="text" placeholder="Search for recipes" className="flex-1 border border-slate-900 focus:outline rounded-md focus:outline-charcoal focus:border-0  p-2" />
-              <button className="bg-sandybrown w-10 h-full rounded-r-md p-1 absolute right-0 border border-slate-900 "><SearchIcon/> </button>
+              <button className="bg-sandybrown w-10 h-full rounded-r-md p-1 absolute right-0 border border-slate-900 "><SearchIcon /> </button>
             </div>
             <nav>
               <ul className="flex space-x-4">
