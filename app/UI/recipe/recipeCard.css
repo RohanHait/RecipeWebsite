@@ -3,6 +3,11 @@
   --sec-underline-color: black;
   --list-annonate-bg-color: black;
   --list-annonate-color: white;
+  --checkbox-bg-color: white;
+  --checkbox-border-color: black;
+  --checkbox-checked-bg-color: black;
+  --checkbox-checked-color: #34b93d;
+  --checkbox-height: 20px;
 }
 
 .sec-m-header {
@@ -75,25 +80,115 @@
 
   }
 }
-
-.ingredient-checkbox {
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  width: 20px !important;
-  height: 20px !important;
-  border: 2px solid green;
+.ingredient-item input[type="checkbox"] {
   appearance: none;
-  border-radius: 20%;
-  margin-right: 8px;
-  font-size: 1em;
 }
 
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 8px 0px;
+  border-bottom: 1px solid var(--sec-underline-color);
+}
+.ingredient-checkbox {
+  margin-right: 10px;
+  height: var(--checkbox-height);
+  width: var(--checkbox-height);
+  background-color: var(--checkbox-bg-color);
+  border: calc(var(--checkbox-height)*0.15) solid var(--checkbox-border-color);
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: border-color ease 0.2s;
+}
+.ingredient-checkbox::after,
+.ingredient-checkbox::before {
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: calc(var(--checkbox-height) * 0.2);
+  background-color: var(--checkbox-checked-color);
+  display: inline-block;
+  border-radius: 5px;
+  content: " ";
+  transform-origin: left top;
+  transition: opacity ease 0.5;
+}
+.ingredient-checkbox::before {
+  top: calc(var(--checkbox-height) * 0.72);
+  left: calc(var(--checkbox-height) * 0.41);
+  transform: rotate(-135deg);
+  box-shadow: 0 0 0 calc(var(--checkbox-height) * 0.05) var(--checkbox-bg-color);
+}
+.ingredient-checkbox::after {
+  top: calc(var(--checkbox-height) * 0.37);
+  left: calc(var(--checkbox-height) * 0.05);
+  transform: rotate(-45deg);
+}
 .ingredient-checkbox:checked {
-  background-color: blueviolet;
+  border-color: var(--checkbox-checked-color);
+
 }
 
 .ingredient-checkbox:checked:after {
-  content: '\2713';
-  color: white;
+ animation: bottomcheckanim 0.4s ease-in-out 0s forwards;
+}
+.ingredient-checkbox:checked:before {
+ animation: topcheckanim 0.4s ease-in-out 0s forwards;
+}
+
+.ingredient-checkbox + label {
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  &::before{
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background-color: var(--checkbox-border-color);
+    top: 50%;
+    left: 0;
+    content: " ";
+    z-index: -1;
+  }
+}
+.ingredient-checkbox:checked + label {
+  opacity: 0.8; 
+  &::before {
+    opacity: 0.7;
+  animation: linedraw 0.3s ease-in-out 0.1s forwards;
+}
+}
+
+@keyframes linedraw {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+  
+}
+
+@keyframes bottomcheckanim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@keyframes topcheckanim {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
 }
