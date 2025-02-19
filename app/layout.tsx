@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import SearchIcon from '@mui/icons-material/Search';
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,13 +40,13 @@ export default function RootLayout({
             <nav>
               <ul className="flex space-x-4">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/"
                     className="hover:underline"
                     aria-current="page"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className=" hover:underline">

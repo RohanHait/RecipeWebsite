@@ -1,0 +1,99 @@
+.recipe-section {
+  padding: 10px 12px;
+  --sec-underline-color: black;
+  --list-annonate-bg-color: black;
+  --list-annonate-color: white;
+}
+
+.sec-m-header {
+  font-size: 1.6rem;
+  font-weight: bold;
+
+}
+
+.sec-sub-heading-1::after,
+.sec-m-header::after {
+  display: block;
+  height: 1px;
+  content: " ";
+  width: 100%;
+  margin-top: 4px;
+  background-color: var(--sec-underline-color);
+}
+
+.sec-sub-heading-1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 14px 12px;
+
+}
+
+.sec-list {
+  padding: 6px 16px;
+  list-style: none outside;
+
+  >li {
+    margin: 4px;
+    padding: 8px 0px;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+
+    border-bottom: 1px solid var(--sec-underline-color);
+
+    >div {
+      flex: 1;
+    }
+  }
+
+}
+
+.sec-order-list {
+  /*list-style: decimal outside; */
+  counter-reset: orderlist;
+
+  >li {
+    display: list-item;
+    position: relative;
+    margin-left: 50px;
+  }
+
+  >li::before {
+    left: -42px;
+    position: absolute;
+    counter-increment: orderlist;
+    content: counter(orderlist);
+    height: 24px;
+    width: 24px;
+    margin: 2px 8px;
+    border-radius: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    background-color: var(--list-annonate-bg-color);
+    color: var(--list-annonate-color);
+
+  }
+}
+
+.ingredient-checkbox {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid green;
+  appearance: none;
+  border-radius: 20%;
+  margin-right: 8px;
+  font-size: 1em;
+}
+
+.ingredient-checkbox:checked {
+  background-color: blueviolet;
+}
+
+.ingredient-checkbox:checked:after {
+  content: '\2713';
+  color: white;
+}
