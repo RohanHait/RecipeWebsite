@@ -1,6 +1,6 @@
 .recipe-section {
   padding: 10px 12px;
-  --sec-underline-color: black;
+  --sec-underline-color: rgb(229,231,235);
   --list-annonate-bg-color: black;
   --list-annonate-color: white;
   --checkbox-bg-color: white;
@@ -160,6 +160,41 @@
     opacity: 0.7;
   animation: linedraw 0.3s ease-in-out 0.1s forwards;
 }
+}
+.nutrition-item {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border-top: 1px solid black;
+}
+.nutrition-name {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.nutrition-value {
+  font-size: 10px;
+  font-weight:lighter;
+  padding: 0px 4px;
+}
+.nutrition-percent {
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+}
+.nutrition-big-line {
+  height: 12px;
+  width: 100%;
+  background-color: black;
+}
+.nutrition-small-line{
+  height: 8px;
+  width: 100%;
+  background-color: black;
+}
+.sub-item {
+  margin-left: 12px;
 }
 
 @keyframes linedraw {

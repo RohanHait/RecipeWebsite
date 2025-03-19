@@ -18,11 +18,31 @@ const recipe: RecipeData = {
   course: "Main Course",
   diet: ["Gluten Free", "Vegetarian"],
   difficulty: "Modarate",
-  notes: `- **Replacing cashews**: If you don’t have cashews then add almonds. Blanch the almonds in hot water for 30 minutes. Then peel and blend them till smooth with some water.\n 
-- **Sugar**: Addition of sugar depends upon your taste as well as the tanginess present in the tomatoes. So add as per taste. If you add cream then you might have to add less sugar.\n 
--**Taste and flavor**: If the butter paneer masala gravy tastes tangy or sour, then to balance the sour taste you can add a bit of sugar or cream. But do not add too much sugar as then the gravy becomes too sweet. Also, do note if you add cream then you might have to add less sugar in the sauce or gravy.\n 
-- **Color**: To get the bright orangish-red color, its best to use kashmiri red chilli powder or deghi mirch instead of artificial food colors. Using deep red colored tomatoes also contribute to a lovely orange color in the gravy.\n 
-- **Frying paneer** (optional): You can fry the paneer cubes if you want and then add in the prepared sauce or gravy.`
+  instructions: "Soak cashews in a hot water for 20 to 30 minutes. When the cashews are soaking, you can prep the other ingredients like chopping tomatoes, preparing ginger-garlic paste, slicing paneer etc. Then drain and add the soaked cashews in a blender or mixer-grinder. Add 2 to 3 tablespoons water and blend to a smooth and fine paste without any tiny bits or chunks of cashews.",
+  notes: "You can add cream or butter to make it more rich",
+  Nutrition: {
+    fat: { value: 10, unit: "g", percentage: 15 },
+    saturates: { value: 5, unit: "g", percentage: 25 },
+    carbs: { value: 20, unit: "g", percentage: 10 },
+    sugars: { value: 5, unit: "g", percentage: 5 },
+    fibre: { value: 5, unit: "g", percentage: 20 },
+    protein: { value: 10, unit: "g", percentage: 20 },
+    cholesterol: { value: 5, unit: "mg", percentage: 10 },
+    sodium: { value: 10, unit: "mg", percentage: 5 },
+    potassium: { value: 20, unit: "mg", percentage: 10 },
+    microNutrition: [
+      { name: "Vitamin A", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Vitamin C", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Calcium", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Iron", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Vitamin D", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Vitamin B12", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Vitamin B6", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Magnesium", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Zinc", properties: { value: 10, unit: "mg", percentage: 5 } },
+      { name: "Phosphorus", properties: { value: 10, unit: "mg", percentage: 5 } },
+    ]
+  } 
 
 }
 

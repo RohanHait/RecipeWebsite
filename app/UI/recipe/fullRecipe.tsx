@@ -11,6 +11,7 @@ import { z } from "zod"
 import { useDebouncedCallback } from "use-debounce";
 import { InstractionSection } from "./instractionSection";
 import "@/app/UI/recipe/recipeCard.css"
+import NutritionSection from "./NutritionSection";
 interface propTypes {
   recipe: RecipeData,
 }
@@ -41,9 +42,9 @@ function CheckBox({ id, item, setValue, getIntitalValue }: CheckBoxProps) {
         checked={isChecked}
       />
       <label htmlFor={`ingredient-cb-${id}`} aria-labelledby={`ingredient-cb-${id}`}>
-        {item.unit && <span className="ingredient-unit">{item.unit} </span>}
+        <span className={`ingredient-unit ${!item.unit && "hidden"}`}>{item.unit} </span>
         <span className="ingredinet-name">{item.name} </span>
-        {item.note && <span className={`font-normal ingredient-note`} > - {item.note} </span>}
+        <span className={`font-normal ingredient-note ${!item.note && "hidden" }`} > - {item.note} </span>
       </label>
     </li>)
 }
@@ -155,6 +156,7 @@ export default function RecipeTemplate({ recipe }: propTypes) {
       **/}
       <ShowIngredients ingredients={recipe.ingredients} id={recipe.id} />
       <InstractionSection />
+      {recipe.Nutrition&& <NutritionSection Nutrition={recipe.Nutrition} recipeName={recipe.title} />}
     </section>
   )
 }

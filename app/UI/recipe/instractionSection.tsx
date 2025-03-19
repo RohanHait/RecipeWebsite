@@ -1,7 +1,7 @@
 
 function InstractionSection() {
   return (
-    <section className="recipe-section" id="#Instractions">
+    <section className="recipe-section" id="Instractions">
       <h3 className="sec-m-header"> Instractions </h3>
       <h4 className="sec-sub-heading-1">Preparation </h4>
       <div>
