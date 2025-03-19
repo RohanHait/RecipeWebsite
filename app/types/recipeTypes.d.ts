@@ -12,8 +12,22 @@ export interface Ingredient {
   name: string,
   note?: string,
 }
-interface Nutrations {
-  fat: number,
+interface Nutrition_properties{
+  value : number,
+  unit : string,
+  percentage : number
+}
+export interface Nutrition {
+  fat: Nutrition_properties,
+  saturates: Nutrition_properties,
+  carbs: Nutrition_properties,
+  sugars: Nutrition_properties,
+  fibre: Nutrition_properties,
+  protein: Nutrition_properties,
+  cholesterol: Nutrition_properties,
+  sodium: Nutrition_properties,
+  potassium: Nutrition_properties,
+  microNutrition: Array<{ name: string, properties: Nutrition_properties}>
 }
 export interface RecipeData extends recipeMetaData {
   prepTime: number,
@@ -23,8 +37,9 @@ export interface RecipeData extends recipeMetaData {
   diet: Array<string>,
   difficulty: string,
   ingredients: Array<Ingredient>,
+  instructions : string,
   notes: string,
-
+  Nutrition?: Nutrition,
 }
 
 

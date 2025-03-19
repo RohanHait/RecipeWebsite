@@ -12,6 +12,7 @@ import { useDebouncedCallback } from "use-debounce";
 import { InstractionSection } from "./instractionSection";
 import "@/app/UI/recipe/recipeCard.css"
 import NutritionSection from "./NutritionSection";
+import CommentScetion from "./CommentScetion";
 interface propTypes {
   recipe: RecipeData,
 }
@@ -157,6 +158,7 @@ export default function RecipeTemplate({ recipe }: propTypes) {
       <ShowIngredients ingredients={recipe.ingredients} id={recipe.id} />
       <InstractionSection />
       {recipe.Nutrition&& <NutritionSection Nutrition={recipe.Nutrition} recipeName={recipe.title} />}
+      <CommentScetion />
     </section>
   )
 }
