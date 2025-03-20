@@ -2,10 +2,10 @@ export interface recipeMetaData {
   id: number,
   title: string,
   desc: string,
-  img: string,
-  author: string,
-  likes: number,
-  views: number,
+  img?: string,
+  author?: string,
+  likes?: number,
+  views?: number,
 }
 export interface Ingredient {
   unit?: string,
@@ -30,15 +30,15 @@ export interface Nutrition {
   microNutrition: Array<{ name: string, properties: Nutrition_properties}>
 }
 export interface RecipeData extends recipeMetaData {
-  prepTime: number,
-  cooktime: number,
-  cuisine: string,
-  course: string,
-  diet: Array<string>,
-  difficulty: string,
-  ingredients: Array<Ingredient>,
-  instructions : string,
-  notes: string,
+  prepTime?: number,
+  cooktime?: number,
+  cuisine?: string,
+  course?: string,
+  diet?: Array<string>,
+  difficulty?: string,
+  ingredients?: Array<Ingredient>,
+  instructions? : string,
+  notes?: string,
   Nutrition?: Nutrition,
 }
 

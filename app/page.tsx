@@ -1,5 +1,6 @@
 import { recipeMetaData } from "./types/recipeTypes";
 import { RecipeCard } from "./UI/global/recipeCard";
+import pool from "./lib/db";
 
 const tempData: recipeMetaData = {
   id: 1,

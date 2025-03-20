@@ -14,8 +14,10 @@
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.6",
     "next": "15.0.0",
+    "postgres": "^3.4.5",
     "react": "19.0.0-rc-65a56d0e-20241020",
     "react-dom": "19.0.0-rc-65a56d0e-20241020",
+    "react-quill-new": "^3.4.1",
     "use-debounce": "^10.0.4",
     "zod": "^3.24.2"
   },

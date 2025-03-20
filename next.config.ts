@@ -8,7 +8,14 @@ const nextConfig: NextConfig = {
       use: ["@svgr/webpack"],
     })
     return config
-  }
+  },
+  experimental:{
+  serverActions: {
+    bodySizeLimit: '2mb',
+    allowedOrigins: ["http://localhost:4000"]
+  },
+  
+}
 };
 
 export default nextConfig;

@@ -264,6 +264,47 @@ justify-content: center;
   min-height: 150px;
 }
 
+.recipe-post-form {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  width: 50vw; 
+  min-width: 300px;
+  margin: 0 auto;
+  & input {
+    padding: 8px;
+    display: block;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 8px;
+  }
+  & textarea {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    min-height: 150px;
+  }
+  & label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    margin-top: 8px;
+  }
+  > fieldset {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 8px;
+    & legend {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+}
+
 @keyframes linedraw {
   0% {
     width: 0%;
